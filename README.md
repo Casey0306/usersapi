@@ -2,13 +2,13 @@
 
 # These tutorial describe how to run application for testing purpose. Productive deployment tutorial will presented in next release.
 
- - Install postgres database;
- - Create database(DB_NAME);
- - Create database user(DB_USER);
- - Grant all privileges for user to the database;
- - Clone application from git to the local directory, git clone....;
- - Create python environment;
- - Create env variables in python environment; List of variables 
+    - Install postgres database;
+    - Create database(DB_NAME);
+    - Create database user(DB_USER);
+    - Grant all privileges for user to the database;
+    - Clone application from git to the local directory, git clone....;
+    - Create python environment;
+    - Create env variables in python environment; List of variables 
     (
     SEC_KEY='django-insecure-.....', 
     DB_NAME='userapi', 
@@ -17,10 +17,10 @@
     DB_HOST='localhost', 
     DB_PORT=''
     )
- - Install python packages from requirements.txt file: pip install -r requirements.txt;
- - Migrate database structure to the database: python manage.py makemigrations python manage.py migrate;
- - Create superuser, for admin web: python manage.py createsuperuser;
- - Start django server in test mode python manage.py runserver
+    - Install python packages from requirements.txt file: pip install -r requirements.txt;
+    - Migrate database structure to the database: python manage.py makemigrations python manage.py migrate;
+    - Create superuser, for admin web: python manage.py createsuperuser;
+    - Start django server in test mode python manage.py runserver
  
 # REST API Description:
     Get token
