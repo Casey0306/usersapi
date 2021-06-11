@@ -23,67 +23,67 @@
  - Start django server in test mode python manage.py runserver
  
 # REST API Description:
-Get token
-Request:
-URL: serever_hostname/api/users/get_token
-Method: POST
-Headers: 'Content-Type: application/json'
-Body:
-{ 
-    "username": "Kirill",
-    "password": "Kirill@$%16745" 
-}
-Success Response:
-Code: HTTP 200 OK
+    Get token
+    Request:
+    URL: serever_hostname/api/users/get_token
+    Method: POST
+    Headers: 'Content-Type: application/json'
+    Body:
+    { 
+        "username": "Kirill",
+        "password": "Kirill@$%16745" 
+    }
+    Success Response:
+    Code: HTTP 200 OK
 
-Create user
-Request:
-URL: serever_hostname/api/users/create_user
-Method: POST
-Headers: 'Content-Type: application/json', 'Bearer <token>'
-Body:
-{
-    "username": "Batman",
-    "password": "Batman@$%16745",
-    "first_name": "Roman",
-    "last_name": "Ivanov",
-    "is_active": 1
-}
-Success Response:
-Code: HTTP 201 Created
-
-Get users
-Request:
-URL: serever_hostname/api/users/get_users
-Method: GET
-Headers: 'Content-Type: application/json', 'Bearer <token>'
-Success Response:
-Code: HTTP 200 OK
-
-Get user
-Request:
-URL: serever_hostname/api/users/get_user/<user_id>
-Method: GET
-Headers: 'Content-Type: application/json', 'Bearer <token>'
-Success Response:
-Code: HTTP 200 OK
-
-Update user
-Request:
-URL: serever_hostname/api/users/update_user/<user_id>
-Method: PATCH
-Body:
-{
-    "password": "Batman@$%16745",
-}
-Headers: 'Content-Type: application/json', 'Bearer <token>'
-Success Response:
-Code: HTTP 200 OK
-
-Delete user
-Request:
-URL: serever_hostname/api/users/delete_user/<user_id>
-Method: DELETE
-Headers: 'Content-Type: application/json', 'Bearer <token>'
-Success Response:
-Code: HTTP 204 No Content
+    Create user
+    Request:
+    URL: serever_hostname/api/users/create_user
+    Method: POST
+    Headers: 'Content-Type: application/json', 'Bearer <token>'
+    Body:
+    {
+        "username": "Batman",
+        "password": "Batman@$%16745",
+        "first_name": "Roman",
+        "last_name": "Ivanov",
+        "is_active": 1
+    }
+    Success Response:
+    Code: HTTP 201 Created
+    
+    Get users
+    Request:
+    URL: serever_hostname/api/users/get_users
+    Method: GET
+    Headers: 'Content-Type: application/json', 'Bearer <token>'
+    Success Response:
+    Code: HTTP 200 OK
+    
+    Get user
+    Request:
+    URL: serever_hostname/api/users/get_user/<user_id>
+    Method: GET
+    Headers: 'Content-Type: application/json', 'Bearer <token>'
+    Success Response:
+    Code: HTTP 200 OK
+    
+    Update user
+    Request:
+    URL: serever_hostname/api/users/update_user/<user_id>
+    Method: PATCH
+    Body:
+    {
+        "password": "Batman@$%16745",
+    }
+    Headers: 'Content-Type: application/json', 'Bearer <token>'
+    Success Response:
+    Code: HTTP 200 OK
+    
+    Delete user
+    Request:
+    URL: serever_hostname/api/users/delete_user/<user_id>
+    Method: DELETE
+    Headers: 'Content-Type: application/json', 'Bearer <token>'
+    Success Response:
+    Code: HTTP 204 No Content
